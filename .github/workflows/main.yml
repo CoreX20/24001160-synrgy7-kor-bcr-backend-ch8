@@ -25,8 +25,8 @@ jobs:
           echo "Running Test On CI/CD",
           npm run test
         env:
-          DBHOST: ${{ secrets.DBHOST }}
-          DBPORT: ${{ secrets.DBPORT }}
-          DBDATABASE: ${{ secrets.DBDATABASE }}
-          DBUSER: ${{ secrets.DBUSER }}
-          DBPASSWORD: ${{ secrets.DBPASSWORD }}
+          DB_HOST: ${{ secrets.DBHOST }}
+          DB_PORT: ${{ secrets.DBPORT }}
+          DB_DATABASE: ${{ secrets.DBDATABASE }}
+          DB_USER: ${{ secrets.DBUSER }}
+          DB_PASSWORD: ${{ secrets.DBPASSWORD }}
