@@ -13,7 +13,7 @@ export const CarsController = {
             })
         } catch(error){
             res.status(500).json({
-                message: "Gagal mendapatkan data!",
+                message: { error: 'Internal Server Error' },
             });
         }
     },
