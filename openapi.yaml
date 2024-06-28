@@ -6,6 +6,8 @@ info:
 servers:
   - url: http://localhost:3000/
     description: Local server
+  - url: https://condemned-lauretta-bcr-695ec39f.koyeb.app/
+    description: Main server
 
 components:
   securitySchemes:
