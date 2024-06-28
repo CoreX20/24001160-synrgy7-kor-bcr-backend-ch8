@@ -11,7 +11,7 @@ export const CarsController = {
                 message: "OK",
                 cars : data
             })
-        } catch {
+        } catch(error){
             res.status(500).json({
                 message: "Gagal mendapatkan data!",
             });
