@@ -1,21 +1,37 @@
-# Challenge 5
+# Challenge 8
+
+### Link BackEnd
+
+    https://condemned-lauretta-bcr-695ec39f.koyeb.app/api-docs/
+
 ## Install
+
     npm install
+
 ## Migrations
+
     npm run migrate:latest
+
 ## Seed
+
     npm run seed:run cars
+
 ## Run
+
     npm run dev
 
 # REST API
+
 ## Get list of Cars
+
 ### Request
+
 `GET /cars/`
-    
+
     curl -i -H 'Accept: application/json' http://localhost:3000/cars
 
 ### Response
+
     HTTP/1.1 200 OK
     X-Powered-By: Express
     Content-Type: application/json; charset=utf-8
@@ -36,6 +52,7 @@
     curl -i -H "Accept: application/json" -X POST -F "image=@C:/Users/User/Downloads/Honda Civic.jpeg" -F "name=Hyundai" -F "price=200000" -F "start_rent=2024/04/02" -F "finish_rent=2024/05/18" http://localhost:3000/cars/create
 
 ### Response
+
     HTTP/1.1 201 Created
     X-Powered-By: Express
     Content-Type: application/json; charset=utf-8
@@ -56,7 +73,7 @@
     curl -i -H "Accept: application/json" -X PUT -F "image=/@C:/Users/User/Downloads/Toyota Camry.webp" -F "name=Toyota" http://localhost:3000/cars/2
 
 ### Response
-   
+
     HTTP/1.1 200 OK
     X-Powered-By: Express
     Content-Type: application/json; charset=utf-8
@@ -77,6 +94,7 @@
     curl -i -H 'Accept: application/json' -X DELETE http://localhost:3000/cars/2
 
 ### Response
+
     HTTP/1.1 200 OK
     X-Powered-By: Express
     Content-Type: application/json; charset=utf-8
@@ -89,4 +107,5 @@
     {"status":"OK","message":"Data berhasil Dihapus!"}
 
 # ERD (Entity Relationship Diagram)
+
 ![ERD](./ERD.png)
