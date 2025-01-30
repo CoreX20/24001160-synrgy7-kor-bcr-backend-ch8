@@ -14,7 +14,13 @@ const port = 3000;
 const swaggerDocument = YAML.load('openapi.yaml')
 
 Model.knex(knexInstance);
-app.use(cors());
+// app.use(cors()); 
+
+app.use(cors({
+  origin: 'https://binarcarrental-ch8.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use(express.json());
