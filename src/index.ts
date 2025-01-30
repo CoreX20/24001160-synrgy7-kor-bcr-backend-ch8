@@ -20,6 +20,7 @@ app.use(cors({
   origin: 'https://binarcarrental-ch8.vercel.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
+  preflightContinue: false,
 }));
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
